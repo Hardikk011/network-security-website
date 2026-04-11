@@ -1,70 +1,125 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/Button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/Card";
 import { Link } from "wouter";
-import { Cloud, Shield, Network, ServerCog, CheckCircle2, Clock, Scaling, LineChart, ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const featureCards = [
+  {
+    title: "Cloud Infrastructure",
+    description: "Scalable, resilient cloud architecture deployed across AWS, Azure, and private data centers with zero downtime migration paths.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
+    alt: "Cloud computing infrastructure"
+  },
+  {
+    title: "Cybersecurity",
+    description: "Zero-trust security models, continuous threat hunting, SOC monitoring, and comprehensive compliance frameworks for regulated industries.",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
+    alt: "Cybersecurity operations"
+  },
+  {
+    title: "Managed IT Services",
+    description: "Proactive 24/7 monitoring, maintenance, and dedicated US-based support engineers for mission-critical business systems.",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80",
+    alt: "IT support team"
+  }
+];
+
+const gridImages = [
+  { src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=80", alt: "Data center server racks" },
+  { src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&q=80", alt: "Network monitoring" },
+  { src: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500&q=80", alt: "Network cabling" },
+  { src: "https://images.unsplash.com/photo-1607706189992-eae578626c86?w=500&q=80", alt: "Cloud infrastructure" }
+];
+
+const whyPoints = [
+  "99.99% uptime SLA backed by financial guarantees",
+  "24/7/365 US-based Network Operations Center",
+  "ISO 27001 and SOC 2 Type II certified",
+  "Elastic capacity scaling in under 60 seconds",
+  "Dedicated senior architect on every engagement",
+  "Quarterly strategic technology reviews included"
+];
 
 export default function Home() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-  };
-
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background pt-16 md:pt-24 pb-32">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
+
+      {/* ── HERO ────────────────────────────────────────────────── */}
+      <section className="bg-background pt-20 pb-24">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left — text */}
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={containerVariants}
-              className="max-w-2xl"
             >
-              <motion.div variants={itemVariants} className="inline-flex items-center rounded-full border border-border px-3 py-1 text-sm font-medium mb-6 text-foreground/80">
-                <span className="flex h-2 w-2 rounded-full bg-accent mr-2"></span>
-                Enterprise IT Solutions
+              <motion.div variants={itemVariants}>
+                <span className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-sm font-medium text-foreground/70 mb-8">
+                  <span className="h-2 w-2 rounded-full bg-accent flex-shrink-0"></span>
+                  Enterprise IT Solutions
+                </span>
               </motion.div>
-              <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-                Engineered for <span className="text-accent">Scale.</span> <br />
-                Secured for <span className="text-accent">Tomorrow.</span>
+
+              <motion.h1
+                variants={itemVariants}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-foreground mb-6"
+              >
+                Engineered for{" "}
+                <span className="text-accent">Scale.</span>
+                <br />
+                Secured for{" "}
+                <span className="text-accent">Tomorrow.</span>
               </motion.h1>
-              <motion.p variants={itemVariants} className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-                NexCore delivers uncompromising IT infrastructure, cloud architecture, and managed services to organizations that cannot afford downtime.
+
+              <motion.p
+                variants={itemVariants}
+                className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-lg"
+              >
+                NexCore delivers uncompromising IT infrastructure, cloud
+                architecture, and managed services to organizations that cannot
+                afford downtime.
               </motion.p>
+
               <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                 <Link href="/contact">
-                  <Button size="lg" className="w-full sm:w-auto" data-testid="btn-hero-get-started">
+                  <Button size="lg" data-testid="btn-hero-get-started">
                     Get Started
                   </Button>
                 </Link>
                 <Link href="/services">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto" data-testid="btn-hero-learn-more">
+                  <Button variant="outline" size="lg" data-testid="btn-hero-learn-more">
                     Learn More
                   </Button>
                 </Link>
               </motion.div>
             </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
+
+            {/* Right — image card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-              className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden border border-border shadow-xl"
+              transition={{ duration: 0.65, ease: "easeOut" }}
+              className="rounded-2xl overflow-hidden border border-border shadow-lg"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80" 
-                alt="Modern server room data center" 
-                className="w-full h-full object-cover"
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80"
+                alt="Modern server room data center"
+                className="w-full h-[420px] lg:h-[520px] object-cover"
                 loading="lazy"
               />
             </motion.div>
@@ -72,123 +127,150 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="bg-section py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <motion.div 
+      {/* ── FEATURE CARDS (image on top) ────────────────────────── */}
+      <section className="bg-[#F8FAFC] dark:bg-card py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-2xl mx-auto mb-14"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Capabilities</h2>
-            <p className="text-muted-foreground text-lg">Comprehensive technology solutions designed for performance, security, and reliability.</p>
+            <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Core Capabilities
+            </motion.h2>
+            <motion.p variants={itemVariants} className="text-muted-foreground text-lg">
+              Comprehensive technology solutions built for performance,
+              security, and reliability at enterprise scale.
+            </motion.p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
-            {[
-              { icon: Cloud, title: "Cloud Infrastructure", desc: "Scalable, resilient cloud architecture deployed across AWS, Azure, and private environments." },
-              { icon: Shield, title: "Cybersecurity", desc: "Zero-trust security models, threat hunting, and comprehensive compliance frameworks." },
-              { icon: Network, title: "Network Solutions", desc: "High-throughput, low-latency enterprise networking and SD-WAN implementations." },
-              { icon: ServerCog, title: "Managed IT", desc: "Proactive monitoring, maintenance, and 24/7 support for critical business systems." }
-            ].map((service, i) => (
-              <motion.div key={i} variants={itemVariants}>
-                <Card hoverEffect className="h-full">
-                  <CardHeader>
-                    <div className="h-12 w-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
-                      <service.icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{service.desc}</p>
-                  </CardContent>
-                </Card>
+            {featureCards.map((card, i) => (
+              <motion.div
+                key={i}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+                className="rounded-xl border border-border bg-background shadow-sm overflow-hidden"
+              >
+                {/* Image on top */}
+                <div className="overflow-hidden h-52">
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                {/* Content below */}
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{card.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{card.description}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* ── GRID IMAGE SECTION (left text + right 2×2 grid) ─────── */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left — text block */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={containerVariants}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Enterprises Choose NexCore</h2>
-              <p className="text-muted-foreground text-lg mb-8">
-                We don't just maintain systems; we engineer strategic advantages. Our methodology ensures your technology operates as a reliable engine for growth.
-              </p>
-              
-              <div className="space-y-6">
-                {[
-                  { icon: CheckCircle2, title: "99.99% Uptime SLAs", desc: "Financially backed guarantees for critical system availability." },
-                  { icon: Clock, title: "24/7/365 US-Based NOC", desc: "Round-the-clock monitoring and incident response by certified engineers." },
-                  { icon: Scaling, title: "Elastic Scalability", desc: "Infrastructure that grows seamlessly alongside your business demands." },
-                  { icon: LineChart, title: "Proactive Strategy", desc: "Quarterly technology reviews to align IT investments with business goals." }
-                ].map((feature, i) => (
-                  <motion.div key={i} variants={itemVariants} className="flex gap-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <feature.icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg">{feature.title}</h4>
-                      <p className="text-muted-foreground">{feature.desc}</p>
-                    </div>
-                  </motion.div>
+              <motion.p variants={itemVariants} className="text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+                Why NexCore
+              </motion.p>
+              <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+                The Infrastructure Your Business Deserves
+              </motion.h2>
+              <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed mb-8">
+                For over 15 years, NexCore has operated with a singular focus:
+                delivering stable, secure, and scalable IT foundations for
+                organizations that demand excellence. We treat technology as an
+                invisible enabler of growth, not a source of friction.
+              </motion.p>
+
+              <motion.ul variants={containerVariants} className="space-y-3 mb-10">
+                {whyPoints.map((point, i) => (
+                  <motion.li key={i} variants={itemVariants} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground/80 text-sm">{point}</span>
+                  </motion.li>
                 ))}
-              </div>
+              </motion.ul>
+
+              <motion.div variants={itemVariants}>
+                <Link href="/about" className="inline-flex items-center gap-2 text-accent font-medium hover:underline underline-offset-4 text-sm">
+                  Learn about our approach <ArrowRight className="h-4 w-4" />
+                </Link>
+              </motion.div>
             </motion.div>
-            
+
+            {/* Right — 2×2 image grid */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative h-[500px] rounded-2xl overflow-hidden border border-border"
+              variants={containerVariants}
+              className="grid grid-cols-2 gap-4"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80" 
-                alt="Cybersecurity operations center" 
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+              {gridImages.map((img, i) => (
+                <motion.div
+                  key={i}
+                  variants={itemVariants}
+                  className="rounded-xl overflow-hidden border border-border shadow-sm"
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-44 object-cover"
+                    loading="lazy"
+                  />
+                </motion.div>
+              ))}
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="bg-section py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* ── ABOUT PREVIEW / STATS ───────────────────────────────── */}
+      <section className="bg-[#F8FAFC] dark:bg-card py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left — image */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="order-2 lg:order-1 relative h-[500px] rounded-2xl overflow-hidden border border-border"
+              className="rounded-2xl overflow-hidden border border-border shadow-lg order-2 lg:order-1"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80" 
-                alt="NexCore Corporate Office" 
-                className="w-full h-full object-cover"
+              <img
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80"
+                alt="NexCore corporate office"
+                className="w-full h-[420px] object-cover"
                 loading="lazy"
               />
             </motion.div>
-            
+
+            {/* Right — text + stats */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -196,33 +278,32 @@ export default function Home() {
               variants={containerVariants}
               className="order-1 lg:order-2"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Built on Precision and Trust</h2>
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Since 2008, NexCore has operated with a singular focus: providing stable, secure, and scalable IT foundations for businesses that demand excellence. We believe technology should be an invisible enabler of success, not a source of friction.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-8 mb-8">
-                <motion.div variants={itemVariants}>
-                  <div className="text-4xl font-bold text-primary dark:text-foreground mb-2">500+</div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Enterprise Clients</div>
-                </motion.div>
-                <motion.div variants={itemVariants}>
-                  <div className="text-4xl font-bold text-primary dark:text-foreground mb-2">15+</div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Years Experience</div>
-                </motion.div>
-                <motion.div variants={itemVariants}>
-                  <div className="text-4xl font-bold text-primary dark:text-foreground mb-2">99.9%</div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Historical Uptime</div>
-                </motion.div>
-                <motion.div variants={itemVariants}>
-                  <div className="text-4xl font-bold text-primary dark:text-foreground mb-2">24/7</div>
-                  <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Dedicated Support</div>
-                </motion.div>
+              <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Built on Precision and Trust
+              </motion.h2>
+              <motion.p variants={itemVariants} className="text-muted-foreground text-lg leading-relaxed mb-10">
+                Since 2008, NexCore has served Fortune 500 companies and growth-stage
+                enterprises with consistent, measurable results. Our team of certified
+                architects and engineers are invested in your long-term success.
+              </motion.p>
+
+              <div className="grid grid-cols-2 gap-8 mb-10">
+                {[
+                  { value: "500+", label: "Enterprise Clients" },
+                  { value: "15+",  label: "Years Experience" },
+                  { value: "99.9%", label: "Historical Uptime" },
+                  { value: "24/7", label: "Dedicated Support" }
+                ].map((stat, i) => (
+                  <motion.div key={i} variants={itemVariants}>
+                    <div className="text-4xl font-bold text-foreground mb-1">{stat.value}</div>
+                    <div className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">{stat.label}</div>
+                  </motion.div>
+                ))}
               </div>
 
               <motion.div variants={itemVariants}>
-                <Link href="/about" className="inline-flex items-center text-accent font-medium hover:underline underline-offset-4">
-                  Read our full story <ArrowRight className="ml-2 h-4 w-4" />
+                <Link href="/about" className="inline-flex items-center gap-2 text-accent font-medium hover:underline underline-offset-4 text-sm">
+                  Read our full story <ArrowRight className="h-4 w-4" />
                 </Link>
               </motion.div>
             </motion.div>
@@ -230,21 +311,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-primary dark:bg-card text-primary-foreground border-y border-border">
-        <div className="container mx-auto px-4 text-center max-w-4xl">
+      {/* ── CTA ─────────────────────────────────────────────────── */}
+      <section className="py-24 bg-[#0B1F3A] dark:bg-[#111827]">
+        <div className="container mx-auto px-6 lg:px-8 text-center max-w-3xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.55 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to upgrade your infrastructure?</h2>
-            <p className="text-xl text-primary-foreground/80 mb-10">
-              Schedule a strategic consultation with our enterprise architects to evaluate your current environment and discuss scalability.
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Ready to upgrade your infrastructure?
+            </h2>
+            <p className="text-lg text-white/70 mb-10">
+              Schedule a strategic consultation with our enterprise architects
+              to evaluate your environment and plan your next phase of growth.
             </p>
             <Link href="/contact">
-              <Button variant="accent" size="lg" className="px-8 text-lg" data-testid="btn-cta-contact">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-white px-8 text-base border-0"
+                data-testid="btn-cta-contact"
+              >
                 Contact Our Team
               </Button>
             </Link>

@@ -1,0 +1,185 @@
+You are a senior frontend architect and UI/UX designer.
+
+IMPORTANT: The current homepage is NOT matching the required design.
+You must REBUILD the homepage layout to match the provided reference image style EXACTLY (second image), while keeping it an IT Solutions website.
+
+---------------------------------------
+
+🎯 PRIMARY GOAL
+
+Recreate the homepage layout EXACTLY like the reference design:
+
+- Same structure
+- Same spacing
+- Same alignment
+- Same visual hierarchy
+
+But content should be for IT Solutions (not real estate).
+
+---------------------------------------
+
+🚫 STRICT RULES
+
+- NO gradients anywhere
+- NO random layout generation
+- NO creative redesign
+- FOLLOW layout strictly
+- NO overlapping elements
+- NO invisible text
+- NO broken responsiveness
+
+---------------------------------------
+
+🎨 DESIGN STYLE TO MATCH (VERY IMPORTANT)
+
+Follow this structure EXACTLY:
+
+1. HERO SECTION (TOP PRIORITY)
+
+Layout:
+- LEFT: Text content
+- RIGHT: Image inside rounded card
+
+LEFT SIDE MUST INCLUDE:
+- Small badge (rounded pill)
+- Big bold heading (multi-line)
+- Highlight words in BLUE (like "Scale", "Tomorrow")
+- Supporting paragraph
+- 2 buttons (primary + secondary)
+
+RIGHT SIDE:
+- Large image
+- Inside rounded container (card style)
+- Soft shadow
+- Clean padding
+
+Spacing:
+- Large padding (top and bottom)
+- Balanced gap between text and image
+
+---------------------------------------
+
+2. FEATURE CARDS SECTION
+
+- 3 cards in a row
+- Each card:
+  - Top image
+  - Title
+  - Description
+- Rounded corners
+- Clean border
+- Soft shadow
+
+---------------------------------------
+
+3. GRID IMAGE SECTION (LIKE LOWER PART OF IMAGE)
+
+- Left: Text block
+- Right: 2x2 image grid
+- Equal spacing
+- Proper alignment
+
+---------------------------------------
+
+🎨 COLOR SYSTEM (STRICT)
+
+LIGHT MODE:
+- Background: #FFFFFF
+- Section Background: #F8FAFC
+- Primary Text: #111827
+- Secondary Text: #6B7280
+- Accent Blue: #2563EB
+- Border: #E5E7EB
+
+DARK MODE:
+- Background: #0F172A
+- Card: #111827
+- Text: #F9FAFB
+- Secondary: #9CA3AF
+- Border: #1F2937
+
+Rules:
+- NO gradients
+- Only solid colors
+- Blue accent ONLY for highlights
+
+---------------------------------------
+
+🌗 DARK MODE (MANDATORY)
+
+- Toggle in navbar
+- Persist using localStorage
+- No flicker
+- No contrast issues
+
+---------------------------------------
+
+🧩 COMPONENT RULES
+
+CARDS:
+- Rounded-xl
+- Border + soft shadow
+- No glow
+
+BUTTONS:
+- Solid color
+- Hover: slight scale + darker shade
+
+NAVBAR:
+- Clean, minimal
+- Sticky/floating
+- Contains:
+  - Logo
+  - Menu
+  - Theme toggle
+
+---------------------------------------
+
+🎞️ ANIMATIONS
+
+Use Framer Motion:
+- Fade
+- Slide
+- Small scale
+
+Duration: 0.3–0.5s only
+
+---------------------------------------
+
+📱 RESPONSIVENESS
+
+- Mobile-first
+- Stack hero section vertically on mobile
+- Grid becomes single column
+- No overflow issues
+
+---------------------------------------
+
+🖼️ IMAGE RULES
+
+- Use clean professional images:
+  - Servers
+  - Cloud
+  - Networking
+- No distortion
+- Maintain aspect ratio
+- Proper spacing
+
+---------------------------------------
+
+⚠️ FINAL INSTRUCTION
+
+DO NOT generate a generic UI.
+
+STRICTLY match:
+- Layout structure
+- Typography scale
+- Spacing
+- Card design
+- Hero alignment
+
+Make it visually almost identical to the reference image, but with IT Solutions content.
+
+---------------------------------------
+
+Generate clean, reusable, well-structured React + TypeScript code.
