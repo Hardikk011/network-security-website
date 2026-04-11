@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -60,51 +61,50 @@
   --elevate-2: rgba(0,0,0, .08);
 
   --background: 0 0% 100%;
-  --section: 210 40% 98%;
-  --foreground: 220 40% 10%;
+  --section: 40 20% 97%;
+  --foreground: 220 30% 8%;
   --border: 220 13% 91%;
-  
+
   --card: 0 0% 100%;
-  --card-foreground: 220 40% 10%;
+  --card-foreground: 220 30% 8%;
   --card-border: 220 13% 91%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 220 40% 10%;
+  --popover-foreground: 220 30% 8%;
   --popover-border: 220 13% 91%;
 
-  --primary: 214 68% 14%;
+  --primary: 222 47% 8%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 215 35% 18%;
+  --secondary: 220 14% 18%;
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 210 40% 98%;
+  --muted: 40 20% 97%;
   --muted-foreground: 220 9% 46%;
 
-  --accent: 177 79% 39%;
-  --accent-foreground: 0 0% 100%;
-
-  --coral: 9 78% 60%;
+  /* Amber / gold accent — #F59E0B */
+  --accent: 38 92% 51%;
+  --accent-foreground: 222 47% 8%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
   --input: 220 13% 91%;
-  --ring: 214 68% 14%;
-  
-  --sidebar: 210 40% 98%;
-  --sidebar-foreground: 220 40% 10%;
+  --ring: 38 92% 51%;
+
+  --sidebar: 40 20% 97%;
+  --sidebar-foreground: 220 30% 8%;
   --sidebar-border: 220 13% 91%;
-  --sidebar-primary: 214 68% 14%;
+  --sidebar-primary: 222 47% 8%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 220 13% 91%;
-  --sidebar-accent-foreground: 220 40% 10%;
-  --sidebar-ring: 214 68% 14%;
+  --sidebar-accent-foreground: 220 30% 8%;
+  --sidebar-ring: 38 92% 51%;
 
-  --app-font-sans: 'Inter', sans-serif;
+  --app-font-sans: 'Outfit', sans-serif;
   --app-font-serif: Georgia, serif;
   --app-font-mono: Menlo, monospace;
-  --radius: .5rem;
+  --radius: .625rem;
 
   --sidebar-primary-border: hsl(var(--sidebar-primary));
   --sidebar-accent-border: hsl(var(--sidebar-accent));
@@ -122,45 +122,46 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 222 47% 11%;
-  --section: 222 47% 11%;
-  --foreground: 210 20% 98%;
-  --border: 215 28% 17%;
-  
-  --card: 221 40% 13%;
-  --card-foreground: 210 20% 98%;
-  --card-border: 215 28% 17%;
+  --background: 222 47% 7%;
+  --section: 222 47% 9%;
+  --foreground: 40 20% 96%;
+  --border: 215 20% 16%;
 
-  --popover: 221 40% 13%;
-  --popover-foreground: 210 20% 98%;
-  --popover-border: 215 28% 17%;
+  --card: 220 35% 10%;
+  --card-foreground: 40 20% 96%;
+  --card-border: 215 20% 16%;
 
-  --primary: 215 35% 18%;
-  --primary-foreground: 210 20% 98%;
+  --popover: 220 35% 10%;
+  --popover-foreground: 40 20% 96%;
+  --popover-border: 215 20% 16%;
 
-  --secondary: 215 35% 18%;
-  --secondary-foreground: 210 20% 98%;
+  --primary: 215 35% 16%;
+  --primary-foreground: 40 20% 96%;
 
-  --muted: 215 28% 17%;
-  --muted-foreground: 220 9% 64%;
+  --secondary: 215 35% 16%;
+  --secondary-foreground: 40 20% 96%;
 
-  --accent: 177 65% 45%;
-  --accent-foreground: 0 0% 100%;
+  --muted: 215 20% 14%;
+  --muted-foreground: 220 9% 60%;
+
+  /* Amber keeps same hue in dark mode, slightly brighter */
+  --accent: 38 95% 56%;
+  --accent-foreground: 222 47% 8%;
 
   --destructive: 0 62% 30%;
-  --destructive-foreground: 210 20% 98%;
+  --destructive-foreground: 40 20% 96%;
 
-  --input: 215 28% 17%;
-  --ring: 215 35% 18%;
-  
-  --sidebar: 221 40% 13%;
-  --sidebar-foreground: 210 20% 98%;
-  --sidebar-border: 215 28% 17%;
-  --sidebar-primary: 215 35% 18%;
-  --sidebar-primary-foreground: 210 20% 98%;
-  --sidebar-accent: 215 28% 17%;
-  --sidebar-accent-foreground: 210 20% 98%;
-  --sidebar-ring: 215 35% 18%;
+  --input: 215 20% 16%;
+  --ring: 38 92% 51%;
+
+  --sidebar: 220 35% 10%;
+  --sidebar-foreground: 40 20% 96%;
+  --sidebar-border: 215 20% 16%;
+  --sidebar-primary: 215 35% 16%;
+  --sidebar-primary-foreground: 40 20% 96%;
+  --sidebar-accent: 215 20% 16%;
+  --sidebar-accent-foreground: 40 20% 96%;
+  --sidebar-ring: 38 92% 51%;
 }
 
 @layer base {
@@ -170,5 +171,11 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 }
