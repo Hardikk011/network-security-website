@@ -1,0 +1,243 @@
+You are a senior frontend architect, UI/UX designer, and animation engineer.
+
+Build a production-ready, enterprise-level IT Solutions website using React with TypeScript, Tailwind CSS, and Framer Motion.
+
+---------------------------------------
+
+🎯 OBJECTIVE
+
+Create a clean, professional, corporate-grade website suitable for IT infrastructure and enterprise clients.
+
+The design must be:
+- Minimal
+- Structured
+- Trustworthy
+- Modern but NOT flashy
+
+Avoid:
+- Gradients
+- Neon colors
+- Over-animation
+- Messy UI
+
+---------------------------------------
+
+🎨 COLOR SYSTEM (STRICT – NO GRADIENTS ANYWHERE)
+
+LIGHT MODE (Match uploaded image style):
+- Primary: #0B1F3A (Deep Navy)
+- Secondary: #1E293B
+- Accent: #2563EB
+- Background: #FFFFFF
+- Section Background: #F8FAFC
+- Text Primary: #111827
+- Text Secondary: #6B7280
+- Border: #E5E7EB
+
+DARK MODE:
+- Background: #0F172A
+- Card Background: #111827
+- Primary: #1E293B
+- Accent: #3B82F6
+- Text Primary: #F9FAFB
+- Text Secondary: #9CA3AF
+- Border: #1F2937
+
+Rules:
+- NO gradients anywhere (backgrounds, text, buttons, effects)
+- Maintain strong contrast
+- Consistent spacing and hierarchy
+- Colors must look professional in BOTH modes
+
+---------------------------------------
+
+🌗 DARK / LIGHT MODE (MANDATORY)
+
+- Add toggle switch in navbar
+- Use localStorage to persist theme
+- No flickering on reload
+- Ensure:
+  - No invisible text
+  - No contrast issues
+  - No layout shift
+
+---------------------------------------
+
+🖼️ IMAGE REQUIREMENTS
+
+IMPORTANT: I have already uploaded a reference image.
+
+- Match the HOME PAGE layout style similar to that image (especially hero section in LIGHT MODE)
+- Use a right-side hero image and left-side text (like modern real estate/enterprise UI)
+
+Use high-quality images for:
+- Data centers / servers
+- Cloud computing
+- Network infrastructure
+- Cybersecurity
+- Office/team (About section)
+
+Placement:
+- Hero → Right image
+- Services → Icons or small images
+- About → Left image + right text
+- Sections → Alternate left/right layout
+
+Rules:
+- No stretched or distorted images
+- No overlapping text on images
+- Proper spacing around images
+- Use lazy loading
+- Images must not break layout in mobile
+
+---------------------------------------
+
+🧱 WEBSITE STRUCTURE
+
+Pages:
+1. Home
+2. Services
+3. About
+4. Contact
+
+---------------------------------------
+
+🏠 HOME PAGE SECTIONS
+
+- Hero Section (match uploaded design style)
+- Services Overview
+- Features / Capabilities
+- About Preview
+- Call-To-Action
+- Footer
+
+---------------------------------------
+
+🧩 COMPONENT DESIGN
+
+NAVBAR:
+- Sticky or floating
+- Clean background (slight blur allowed)
+- Include:
+  - Logo
+  - Navigation links
+  - Dark mode toggle
+
+CARDS:
+- Solid background (white or dark)
+- Thin border
+- Soft shadow
+- Rounded corners
+- No glow / gradient
+
+BUTTONS:
+- Solid colors only
+- Hover:
+  - Slight darken
+  - Small scale (max 1.03)
+- No gradients or flashy effects
+
+---------------------------------------
+
+🎞️ ANIMATIONS (SUBTLE ONLY)
+
+Use Framer Motion.
+
+Allowed:
+- Fade-in
+- Slide-up
+- Slight scale
+
+Rules:
+- Duration: 0.3s to 0.6s
+- No heavy animations
+- No layout shifting
+- Smooth and professional only
+
+---------------------------------------
+
+📐 LAYOUT RULES
+
+- Use proper grid/flex layout
+- Maintain consistent spacing (sections padding 60–100px)
+- Align everything properly
+- NO overlapping elements
+- NO broken layout
+- Clean hierarchy
+
+---------------------------------------
+
+📱 RESPONSIVENESS
+
+- Mobile-first design
+- No overflow issues
+- Proper scaling images
+- Navbar collapses into hamburger menu
+- All sections align properly on all screen sizes
+
+---------------------------------------
+
+⚡ PERFORMANCE
+
+- Lazy load images
+- Optimize assets
+- Avoid heavy rendering
+
+---------------------------------------
+
+📁 FILE STRUCTURE (IMPORTANT)
+
+src/
+ ├── components/
+ │    ├── Navbar.tsx
+ │    ├── Footer.tsx
+ │    ├── Card.tsx
+ │    ├── Button.tsx
+ │
+ ├── pages/
+ │    ├── Home.tsx
+ │    ├── Services.tsx
+ │    ├── About.tsx
+ │    ├── Contact.tsx
+ │
+ ├── layout/
+ │    ├── MainLayout.tsx
+ │
+ ├── hooks/
+ │    ├── useTheme.ts
+ │
+ ├── assets/
+ │    ├── images/
+ │
+ ├── styles/
+ │    ├── globals.css
+ │
+ ├── App.tsx
+ ├── main.tsx
+
+---------------------------------------
+
+❗ STRICT RULES
+
+- NO gradients anywhere
+- NO overlapping UI
+- NO invisible text or broken contrast
+- NO messy alignment
+- NO oversized images breaking layout
+- Everything must look production-ready
+
+---------------------------------------
+
+✅ FINAL EXPECTATION
+
+The website should look like:
+- A real enterprise IT company website
+- Clean, minimal, and professional
+- Inspired by the uploaded image (especially hero section in light mode)
+- Fully responsive
+- Smooth dark/light mode support
+- Proper animations without distraction
+
+---------------------------------------
+
+Generate complete working code with clean structure and reusable components.
