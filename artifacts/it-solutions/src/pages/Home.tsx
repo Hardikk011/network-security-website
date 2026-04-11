@@ -148,7 +148,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.35 }}
-            className="relative -mt-10 z-20 bg-background dark:bg-card border border-border rounded-2xl shadow-lg px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-border"
+            className="relative -mt-10 z-20 bg-background dark:bg-card border border-border rounded-2xl px-6 py-5 grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-border"
+            style={{ boxShadow: "0 8px 32px 0 rgba(12,186,181,0.15), 0 2px 8px 0 rgba(0,0,0,0.08)" }}
           >
             {[
               { value: "500+",  label: "Enterprise Clients" },
@@ -196,7 +197,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.1 }}
                 whileHover={{ scale: 1.01 }}
-                className="rounded-xl border border-border bg-background dark:bg-card shadow-sm overflow-hidden flex flex-col sm:flex-row"
+                className="rounded-xl border border-border bg-background dark:bg-card shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col sm:flex-row"
                 data-testid={`card-service-${i}`}
               >
                 <div className="sm:w-56 lg:w-64 flex-shrink-0 overflow-hidden">
@@ -340,7 +341,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-2 rounded-2xl overflow-hidden border border-border shadow-sm h-[200px] md:h-auto"
+              className="md:col-span-2 rounded-2xl overflow-hidden border border-border h-[200px] md:h-auto"
+              style={{ boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)" }}
             >
               <img
                 src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=80"
@@ -356,7 +358,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:col-span-2 rounded-2xl overflow-hidden border border-border shadow-sm h-[200px]"
+              className="md:col-span-2 rounded-2xl overflow-hidden border border-border h-[200px]"
+              style={{ boxShadow: "0 4px 20px 0 rgba(0,0,0,0.12)" }}
             >
               <img
                 src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=900&q=80"
