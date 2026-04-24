@@ -10,6 +10,7 @@ import {
   Lock,
   PhoneCall,
 } from "lucide-react";
+import { PageContainer } from "@/components/PageContainer";
 
 /* ── Brand palette ── */
 const AMBER  = "#F59E0B";   /* hsl(38 92% 51%)  — primary accent      */
@@ -69,7 +70,7 @@ export default function Home() {
           style={{ background: `linear-gradient(105deg, ${DARK}F5 30%, ${DARK}CC 60%, ${DARK}66 85%, transparent 100%)` }}
         />
 
-        <div className="relative z-10 container mx-auto px-6 lg:px-10 py-28">
+        <PageContainer className="relative z-10 py-24 md:py-32">
           <div className="max-w-2xl">
             <motion.p custom={0} variants={fadeUp} initial="hidden" animate="visible"
               className="text-xs font-bold uppercase tracking-[0.3em] mb-5"
@@ -112,12 +113,12 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-        </div>
+        </PageContainer>
       </section>
 
       {/* ── STATS BAR ─────────────────────────────────────────── */}
-      <section className="bg-background">
-        <div className="container mx-auto px-6 lg:px-10">
+      <section className="bg-background py-16 md:py-20">
+        <PageContainer>
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,12 +138,12 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
-        </div>
+        </PageContainer>
       </section>
 
       {/* ── FEATURED SERVICES (image left + text right) ───────── */}
       <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-6 lg:px-10">
+        <PageContainer>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -205,12 +206,12 @@ export default function Home() {
               View all services <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-        </div>
+        </PageContainer>
       </section>
 
       {/* ── OUR PROMISE: dark full-width section (like reference) ─ */}
       <section className="py-20 md:py-28" style={{ backgroundColor: DARK }}>
-        <div className="container mx-auto px-6 lg:px-10">
+        <PageContainer>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
             {/* Left: bold amber heading + body */}
@@ -268,12 +269,12 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
+        </PageContainer>
       </section>
 
       {/* ── PORTFOLIO GRID: dark card + 2 photos ──────────────── */}
       <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-6 lg:px-10">
+        <PageContainer>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -349,12 +350,12 @@ export default function Home() {
                 alt="Network operations center" className="w-full h-full object-cover" loading="lazy" />
             </motion.div>
           </div>
-        </div>
+        </PageContainer>
       </section>
 
       {/* ── CTA BANNER ─────────────────────────────────────────── */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 lg:px-10">
+        <PageContainer>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -386,7 +387,7 @@ export default function Home() {
               </button>
             </Link>
           </motion.div>
-        </div>
+        </PageContainer>
       </section>
     </div>
   );

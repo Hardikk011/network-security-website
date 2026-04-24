@@ -28,7 +28,7 @@ export function Navbar() {
         boxShadow: "0 1px 0 0 rgba(255,255,255,0.06), 0 4px 24px 0 rgba(0,0,0,0.4)",
       }}
     >
-      <div className="container mx-auto px-6 lg:px-10 h-[68px] flex items-center justify-between gap-8">
+      <div className="container-lg h-[68px] flex items-center justify-between gap-8">
 
         {/* ── Logo ── */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0" data-testid="link-home">

@@ -1,181 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
-@import "tailwindcss";
-@import "tw-animate-css";
-@plugin "@tailwindcss/typography";
 
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-  --color-card-border: hsl(var(--card-border));
-
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-  --color-popover-border: hsl(var(--popover-border));
-
-  --color-primary: hsl(var(--primary));
-  --color-primary-foreground: hsl(var(--primary-foreground));
-  --color-primary-border: var(--primary-border);
-
-  --color-secondary: hsl(var(--secondary));
-  --color-secondary-foreground: hsl(var(--secondary-foreground));
-  --color-secondary-border: var(--secondary-border);
-
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-  --color-muted-border: var(--muted-border);
-
-  --color-accent: hsl(var(--accent));
-  --color-accent-foreground: hsl(var(--accent-foreground));
-  --color-accent-border: var(--accent-border);
-
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
-  --color-destructive-border: var(--destructive-border);
-
-  --color-section: hsl(var(--section));
-
-  --font-sans: var(--app-font-sans);
-  --font-serif: var(--app-font-serif);
-  --font-mono: var(--app-font-mono);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-}
-
-/* LIGHT MODE */
+/* CSS Variables - Light Mode */
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
-  --opaque-button-border-intensity: -8;
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
-
   --background: 0 0% 100%;
-  --section: 40 20% 97%;
   --foreground: 220 30% 8%;
   --border: 220 13% 91%;
-
-  --card: 0 0% 100%;
-  --card-foreground: 220 30% 8%;
-  --card-border: 220 13% 91%;
-
-  --popover: 0 0% 100%;
-  --popover-foreground: 220 30% 8%;
-  --popover-border: 220 13% 91%;
-
+  --input: 220 13% 91%;
+  --ring: 222 47% 8%;
   --primary: 222 47% 8%;
   --primary-foreground: 0 0% 100%;
-
   --secondary: 220 14% 18%;
   --secondary-foreground: 0 0% 100%;
-
-  --muted: 40 20% 97%;
-  --muted-foreground: 220 9% 46%;
-
-  /* Amber / gold accent — #F59E0B */
   --accent: 38 92% 51%;
-  --accent-foreground: 222 47% 8%;
-
+  --accent-foreground: 207 89% 6%;
+  --muted: 40 20% 97%;
+  --muted-foreground: 215 14% 34%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 30% 8%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 30% 8%;
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
-
-  --input: 220 13% 91%;
-  --ring: 38 92% 51%;
-
-  --sidebar: 40 20% 97%;
-  --sidebar-foreground: 220 30% 8%;
-  --sidebar-border: 220 13% 91%;
+  --section: 40 22% 96%;
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 6% 10%;
   --sidebar-primary: 222 47% 8%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 220 13% 91%;
-  --sidebar-accent-foreground: 220 30% 8%;
-  --sidebar-ring: 38 92% 51%;
-
-  --app-font-sans: 'Outfit', sans-serif;
-  --app-font-serif: Georgia, serif;
-  --app-font-mono: Menlo, monospace;
-  --radius: .625rem;
-
-  --sidebar-primary-border: hsl(var(--sidebar-primary));
-  --sidebar-accent-border: hsl(var(--sidebar-accent));
-  --primary-border: hsl(var(--primary));
-  --secondary-border: hsl(var(--secondary));
-  --muted-border: hsl(var(--muted));
-  --accent-border: hsl(var(--accent));
-  --destructive-border: hsl(var(--destructive));
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 40 20% 95%;
+  --sidebar-accent-foreground: 222 47% 8%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 222 47% 8%;
 }
 
+/* CSS Variables - Dark Mode */
 .dark {
-  --button-outline: rgba(255,255,255, .10);
-  --badge-outline: rgba(255,255,255, .05);
-  --opaque-button-border-intensity: 9;
-  --elevate-1: rgba(255,255,255, .04);
-  --elevate-2: rgba(255,255,255, .09);
-
   --background: 222 47% 7%;
-  --section: 222 47% 9%;
   --foreground: 40 20% 96%;
   --border: 215 20% 16%;
-
-  --card: 220 35% 10%;
-  --card-foreground: 40 20% 96%;
-  --card-border: 215 20% 16%;
-
-  --popover: 220 35% 10%;
-  --popover-foreground: 40 20% 96%;
-  --popover-border: 215 20% 16%;
-
-  --primary: 215 35% 16%;
-  --primary-foreground: 40 20% 96%;
-
-  --secondary: 215 35% 16%;
-  --secondary-foreground: 40 20% 96%;
-
-  --muted: 215 20% 14%;
-  --muted-foreground: 220 9% 60%;
-
-  /* Amber keeps same hue in dark mode, slightly brighter */
-  --accent: 38 95% 56%;
-  --accent-foreground: 222 47% 8%;
-
-  --destructive: 0 62% 30%;
-  --destructive-foreground: 40 20% 96%;
-
   --input: 215 20% 16%;
   --ring: 38 92% 51%;
-
-  --sidebar: 220 35% 10%;
+  --primary: 215 35% 16%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 215 35% 16%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 38 95% 56%;
+  --accent-foreground: 207 89% 6%;
+  --muted: 215 20% 14%;
+  --muted-foreground: 215 10% 70%;
+  --card: 220 35% 10%;
+  --card-foreground: 40 20% 96%;
+  --popover: 220 35% 10%;
+  --popover-foreground: 40 20% 96%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 100%;
+  --section: 215 22% 12%;
+  --sidebar-background: 222 47% 7%;
   --sidebar-foreground: 40 20% 96%;
-  --sidebar-border: 215 20% 16%;
-  --sidebar-primary: 215 35% 16%;
-  --sidebar-primary-foreground: 40 20% 96%;
+  --sidebar-primary: 38 92% 51%;
+  --sidebar-primary-foreground: 222 47% 8%;
   --sidebar-accent: 215 20% 16%;
   --sidebar-accent-foreground: 40 20% 96%;
+  --sidebar-border: 215 20% 16%;
   --sidebar-ring: 38 92% 51%;
 }
 
+/* Global Base Styles */
 @layer base {
-  * {
-    @apply border-border;
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
-    letter-spacing: -0.01em;
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.02em;
     font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+/* Container utility classes - NO responsive variants in @apply */
+@layer components {
+  .container-sm {
+    @apply mx-auto w-full max-w-3xl px-4;
+  }
+
+  .container-md {
+    @apply mx-auto w-full max-w-5xl px-4;
+  }
+
+  .container-lg {
+    @apply mx-auto w-full max-w-7xl px-4;
+  }
+
+  .container-full {
+    @apply mx-auto w-full px-4;
+  }
+}
+
+/* Media queries for responsive padding */
+@media (min-width: 640px) {
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-full {
+    @apply px-6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-full {
+    @apply px-8;
   }
 }
