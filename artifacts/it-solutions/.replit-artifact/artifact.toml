@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "IT Solutions"
+title = "CYBER NETWORK SECURITY"
 version = "1.0.0"
 id = "artifacts/it-solutions"
 router = "path"

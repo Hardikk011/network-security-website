@@ -56,9 +56,9 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Contact NexCore</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Contact CYBER NETWORK SECURITY</h1>
             <p className="text-xl text-muted-foreground">
-              Ready to modernize your IT infrastructure? Reach out to our enterprise architects.
+              Reach out to CNS for industrial and corporate IT infrastructure, security, and support services.
             </p>
           </motion.div>
         </div>
@@ -76,13 +76,13 @@ export default function Contact() {
               className="lg:col-span-2 space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold mb-6">Corporate Headquarters</h2>
+                <h2 className="text-2xl font-bold mb-6">Registered Office</h2>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <Building2 className="h-6 w-6 text-accent shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold mb-1">San Francisco Office</h4>
-                      <p className="text-muted-foreground">100 Technology Drive<br />Suite 400<br />San Francisco, CA 94105</p>
+                      <h4 className="font-semibold mb-1">Aniruddh Complex, First Floor</h4>
+                      <p className="text-muted-foreground">Near Jalaram Chowk, Gayatri Nagar,<br />Last Bus Stop, Gayatri Nagar Main Road,<br />Rajkot - 360002</p>
                     </div>
                   </div>
                   
@@ -90,7 +90,7 @@ export default function Contact() {
                     <Phone className="h-6 w-6 text-accent shrink-0" />
                     <div>
                       <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+1 (800) 555-0198</p>
+                      <p className="text-muted-foreground">+91 63515 53927</p>
                     </div>
                   </div>
                   
@@ -98,16 +98,23 @@ export default function Contact() {
                     <Mail className="h-6 w-6 text-accent shrink-0" />
                     <div>
                       <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground">enterprise@nexcore.com</p>
+                      <a href="mailto:cnsinfo7@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
+                        cnsinfo7@gmail.com
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="p-6 bg-section rounded-xl border border-border">
-                <h3 className="font-semibold mb-2">Support Inquiries</h3>
-                <p className="text-sm text-muted-foreground mb-4">Existing clients with active SLAs should contact the 24/7 NOC directly via the client portal or emergency hotline.</p>
-                <p className="text-sm font-medium text-accent">Client Portal Login →</p>
+                <h3 className="font-semibold mb-2">Business Details</h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Website: <a href="https://www.cybernetworksecurity.in" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">www.cybernetworksecurity.in</a><br />
+                  GSTIN: 24BSBPA9422L1ZV<br />
+                  CISCO ID: CSCO13130744<br />
+                  MICROSOFT ID: 13803808
+                </p>
+                <p className="text-sm font-medium text-accent">Serving Since 2015</p>
               </div>
             </motion.div>
 
@@ -127,7 +134,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-2xl font-bold mb-2">Request Received</h3>
                   <p className="text-muted-foreground">
-                    Thank you for contacting NexCore. An enterprise architect will review your requirements and reach out within 1 business day.
+                    Thank you for contacting CYBER NETWORK SECURITY. Our team will review your requirements and reach out shortly.
                   </p>
                   <Button 
                     className="mt-8" 
@@ -142,7 +149,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <div className="p-8 bg-card rounded-2xl border border-border shadow-sm">
-                  <h2 className="text-2xl font-bold mb-6">Request a Consultation</h2>
+                  <h2 className="text-2xl font-bold mb-6">Request a Service Consultation</h2>
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -153,7 +160,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Full Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="John Doe" {...field} data-testid="input-name" />
+                                <Input placeholder="Vijay Adhiya" {...field} data-testid="input-name" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -166,7 +173,7 @@ export default function Contact() {
                             <FormItem>
                               <FormLabel>Company Name</FormLabel>
                               <FormControl>
-                                <Input placeholder="Acme Corp" {...field} data-testid="input-company" />
+                                <Input placeholder="Your Business Name" {...field} data-testid="input-company" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>
@@ -179,9 +186,9 @@ export default function Contact() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Work Email</FormLabel>
+                            <FormLabel>Email</FormLabel>
                             <FormControl>
-                              <Input type="email" placeholder="john@company.com" {...field} data-testid="input-email" />
+                              <Input type="email" placeholder="name@company.com" {...field} data-testid="input-email" />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -196,7 +203,7 @@ export default function Contact() {
                             <FormLabel>Project Details / Requirements</FormLabel>
                             <FormControl>
                               <Textarea 
-                                placeholder="Please describe your IT infrastructure needs..." 
+                                placeholder="Please describe your network, server, security, backup, or IT product requirements..." 
                                 className="min-h-[150px] resize-y" 
                                 {...field} 
                                 data-testid="input-message"

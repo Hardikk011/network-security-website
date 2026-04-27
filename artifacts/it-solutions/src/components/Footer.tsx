@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { MapPin, Phone, Mail } from "lucide-react";
-import logoSrc from "@assets/image_1775930021005.png";
+import logoSrc from "@assets/cns-logo.png";
 
 const DARK  = "#0B0F1A";
 const AMBER = "#F59E0B";
@@ -14,16 +14,28 @@ export function Footer() {
 
           {/* Brand */}
           <div className="col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <img src={logoSrc} alt="CNS logo" className="h-9 w-9 object-contain brightness-200" />
+            <Link href="/" className="flex items-center gap-4 mb-5 group">
+              <div className="relative">
+                <img
+                  src={logoSrc}
+                  alt="CNS logo"
+                  className="h-16 w-16 object-contain transition-all duration-300 group-hover:scale-105"
+                  style={{
+                    filter: "drop-shadow(0 3px 12px rgba(245,158,11,0.2)) brightness(1.1) contrast(1.05)",
+                    background: "radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%)",
+                    borderRadius: "10px",
+                    padding: "3px"
+                  }}
+                />
+              </div>
               <div className="flex flex-col leading-none">
-                <span className="font-bold text-[13px] tracking-widest text-white uppercase">Cyber Network</span>
-                <span className="font-medium text-[10px] tracking-[0.25em] uppercase" style={{ color: AMBER }}>Security</span>
+                <span className="font-bold text-[14px] tracking-widest text-white uppercase transition-colors group-hover:text-white/95">Cyber Network</span>
+                <span className="font-medium text-[11px] tracking-[0.25em] uppercase" style={{ color: AMBER }}>Security</span>
               </div>
             </Link>
             <p className="text-white/45 text-sm leading-relaxed font-light">
-              Enterprise-grade IT infrastructure, cloud solutions, and managed services
-              for organizations that cannot afford downtime.
+              Industrial and corporate IT solutions including networking, server setup,
+              security, backup, AMC, and website development since 2015.
             </p>
           </div>
 
@@ -31,7 +43,12 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-sm tracking-widest uppercase text-white/70 mb-5">Services</h3>
             <ul className="space-y-3 text-sm text-white/45">
-              {["Cloud Infrastructure", "Cybersecurity", "Network Solutions", "Managed IT"].map((s) => (
+              {[
+                "Network Design & Implementation",
+                "Windows Server AD Setup",
+                "Firewall & Antivirus Setup",
+                "CCTV, Backup & IT Products",
+              ].map((s) => (
                 <li key={s}>
                   <Link href="/services"
                     className="hover:text-white transition-colors font-light">{s}</Link>
@@ -46,8 +63,8 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/45">
               {[
                 { label: "About Us",      href: "/about" },
-                { label: "Leadership",    href: "/about" },
-                { label: "Careers",       href: "/about" },
+                { label: "Business IDs",  href: "/about" },
+                { label: "Since 2015",    href: "/about" },
                 { label: "Contact",       href: "/contact" },
               ].map(({ label, href }) => (
                 <li key={label}>
@@ -64,15 +81,17 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-white/45 font-light">
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" style={{ color: AMBER }} />
-                <span>100 Technology Drive, Suite 400<br />San Francisco, CA 94105</span>
+                <span>Aniruddh Complex, First Floor<br />Near Jalaram Chowk, Gayatri Nagar,<br />Rajkot - 360002</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 flex-shrink-0" style={{ color: AMBER }} />
-                <span>+1 (800) 555-0198</span>
+                <span>+91 63515 53927</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0" style={{ color: AMBER }} />
-                <span>enterprise@cns.com</span>
+                <a href="mailto:cnsinfo7@gmail.com" className="hover:text-white transition-colors cursor-pointer">
+                  cnsinfo7@gmail.com
+                </a>
               </li>
             </ul>
           </div>
@@ -85,8 +104,24 @@ export function Footer() {
         >
           <p>© {new Date().getFullYear()} Cyber Network Security. All rights reserved.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
-            {["Privacy Policy", "Terms of Service", "Compliance"].map((t) => (
-              <span key={t} className="hover:text-white/60 transition-colors cursor-pointer">{t}</span>
+            {[
+              { text: "www.cybernetworksecurity.in", href: "https://www.cybernetworksecurity.in" },
+              { text: "GSTIN: 24BSBPA9422L1ZV", href: null },
+              { text: "CNS", href: null }
+            ].map((item) => (
+              item.href ? (
+                <a
+                  key={item.text}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white/60 transition-colors cursor-pointer"
+                >
+                  {item.text}
+                </a>
+              ) : (
+                <span key={item.text} className="hover:text-white/60 transition-colors cursor-pointer">{item.text}</span>
+              )
             ))}
           </div>
         </div>

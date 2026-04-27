@@ -3,7 +3,7 @@ import { useTheme } from "@/hooks/use-theme";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logoSrc from "@assets/image_1775930021005.png";
+import logoSrc from "@assets/cns-logo.png";
 
 /* Navbar is ALWAYS dark regardless of theme */
 const NAV_BG   = "#0B0F1A";
@@ -31,10 +31,22 @@ export function Navbar() {
       <div className="container-lg h-[68px] flex items-center justify-between gap-8">
 
         {/* ── Logo ── */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0" data-testid="link-home">
-          <img src={logoSrc} alt="CNS logo" className="h-8 w-8 object-contain" />
+        <Link href="/" className="flex items-center gap-4 shrink-0 group" data-testid="link-home">
+          <div className="relative">
+            <img
+              src={logoSrc}
+              alt="CNS logo"
+              className="h-14 w-14 md:h-16 md:w-16 object-contain transition-all duration-300 group-hover:scale-105"
+              style={{
+                filter: "drop-shadow(0 2px 8px rgba(245,158,11,0.15)) brightness(1.1) contrast(1.05)",
+                background: "radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%)",
+                borderRadius: "8px",
+                padding: "2px"
+              }}
+            />
+          </div>
           <div className="flex flex-col leading-none">
-            <span className="font-bold text-[13px] tracking-widest text-white uppercase">Cyber Network</span>
+            <span className="font-bold text-[13px] tracking-widest text-white uppercase transition-colors group-hover:text-white/95">Cyber Network</span>
             <span className="font-medium text-[10px] tracking-[0.25em] uppercase" style={{ color: AMBER }}>Security</span>
           </div>
         </Link>
@@ -45,11 +57,15 @@ export function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold tracking-wide transition-colors"
+              className="relative text-sm font-semibold tracking-wide transition-all duration-300 hover:scale-105 px-3 py-2 rounded-md"
               style={{ color: AMBER }}
               data-testid={`nav-${link.label.toLowerCase()}`}
             >
-              {link.label}
+              <span className="relative z-10">{link.label}</span>
+              <div
+                className="absolute inset-0 rounded-md opacity-0 hover:opacity-100 transition-opacity duration-300"
+                style={{ backgroundColor: `${AMBER}15` }}
+              />
             </Link>
           ))}
         </nav>
@@ -71,7 +87,7 @@ export function Navbar() {
               data-testid="btn-nav-contact"
               className="h-9 px-5 rounded-full text-sm font-semibold text-white border border-white/25 hover:border-white/50 transition-colors"
             >
-              Contact Us
+              Call Now
             </button>
           </Link>
 
@@ -82,7 +98,7 @@ export function Navbar() {
               className="h-9 px-5 rounded-full text-sm font-bold transition-all hover:opacity-90 active:scale-[0.97]"
               style={{ backgroundColor: AMBER, color: NAV_BG }}
             >
-              Get Started
+              Request Service
             </button>
           </Link>
         </div>
@@ -121,7 +137,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 text-sm font-semibold border-b border-white/07 last:border-0"
+                  className="py-3 text-sm font-semibold border-b border-white/07 last:border-0 transition-all duration-200 hover:bg-white/5 rounded-md px-3 hover:translate-x-1"
                   style={{ color: AMBER }}
                 >
                   {link.label}
@@ -130,7 +146,7 @@ export function Navbar() {
               <div className="flex gap-3 pt-4">
                 <Link href="/contact" onClick={() => setOpen(false)} className="flex-1">
                   <button className="w-full h-10 rounded-full text-sm font-semibold text-white border border-white/25">
-                    Contact Us
+                    Call Now
                   </button>
                 </Link>
                 <Link href="/contact" onClick={() => setOpen(false)} className="flex-1">
@@ -138,7 +154,7 @@ export function Navbar() {
                     className="w-full h-10 rounded-full text-sm font-bold"
                     style={{ backgroundColor: AMBER, color: NAV_BG }}
                   >
-                    Get Started
+                    Request Service
                   </button>
                 </Link>
               </div>

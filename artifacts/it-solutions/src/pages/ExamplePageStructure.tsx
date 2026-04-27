@@ -44,7 +44,7 @@ export default function ExamplePageStructure() {
               variants={fadeUp}
               className="text-xs font-bold uppercase tracking-widest text-accent mb-4"
             >
-              Section subtitle
+              CYBER NETWORK SECURITY
             </motion.p>
 
             <motion.h1
@@ -52,7 +52,7 @@ export default function ExamplePageStructure() {
               variants={fadeUp}
               className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-foreground mb-6"
             >
-              Build something amazing
+              Build secure business IT
             </motion.h1>
 
             <motion.p
@@ -60,16 +60,16 @@ export default function ExamplePageStructure() {
               variants={fadeUp}
               className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg"
             >
-              This example shows how to properly structure a page using the
-              Container component for consistent centering and spacing.
+              CNS delivers practical infrastructure, server, security, and support
+              services with reliable execution and consistent service quality.
             </motion.p>
 
             <motion.div custom={3} variants={fadeUp} className="flex gap-4">
               <button className="px-8 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition">
-                Get Started
+                Request Service
               </button>
               <button className="px-8 py-3 rounded-lg border border-border hover:bg-background transition">
-                Learn More
+                View Services
               </button>
             </motion.div>
           </motion.div>
@@ -89,10 +89,10 @@ export default function ExamplePageStructure() {
           className="mb-12"
         >
           <p className="text-xs font-bold uppercase tracking-widest text-accent mb-3">
-            Features
+            CNS Services
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-foreground">
-            Why choose us?
+            Why choose CNS?
           </h2>
         </motion.div>
 
@@ -108,10 +108,10 @@ export default function ExamplePageStructure() {
             >
               <div className="h-10 w-10 rounded-lg bg-accent/10 mb-4" />
               <h3 className="text-lg font-bold text-foreground mb-2">
-                Feature {item}
+                Service {item}
               </h3>
               <p className="text-sm text-muted-foreground">
-                Description of what this feature does and why it matters.
+                Professional IT solution delivery tailored for business requirements.
               </p>
             </motion.div>
           ))}
@@ -139,11 +139,11 @@ export default function ExamplePageStructure() {
                 The benefits
               </h2>
               <p className="text-base opacity-90 leading-relaxed mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                CNS helps organizations improve stability, security, and uptime
+                through practical IT implementation and reliable service support.
               </p>
               <button className="inline-flex items-center gap-2 font-semibold hover:underline underline-offset-4">
-                Learn more <ArrowRight className="h-4 w-4" />
+                Contact CNS <ArrowRight className="h-4 w-4" />
               </button>
             </motion.div>
 
@@ -155,9 +155,9 @@ export default function ExamplePageStructure() {
               className="space-y-6"
             >
               {[
-                { title: "Benefit 1", desc: "Description of benefit" },
-                { title: "Benefit 2", desc: "Description of benefit" },
-                { title: "Benefit 3", desc: "Description of benefit" },
+                { title: "Reliable Infrastructure", desc: "Stable network and server operations for business continuity." },
+                { title: "Security Coverage", desc: "Firewall, antivirus, CCTV, and backup solutions under one partner." },
+                { title: "Long-Term Support", desc: "AMC-backed maintenance and practical day-to-day IT assistance." },
               ].map((benefit, i) => (
                 <motion.div
                   key={i}
@@ -197,10 +197,10 @@ export default function ExamplePageStructure() {
             Ready to get started?
           </h2>
           <p className="text-white/80 mb-8 max-w-lg mx-auto">
-            Join thousands of satisfied customers using our platform.
+            Partner with CYBER NETWORK SECURITY for your next IT implementation.
           </p>
           <button className="px-8 py-3 rounded-lg bg-white text-primary font-semibold hover:opacity-90 transition">
-            Start Free Trial
+            Request Consultation
           </button>
         </motion.div>
       </Container>

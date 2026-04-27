@@ -18,53 +18,71 @@ export default function Services() {
 
   const services = [
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure",
-      desc: "Architect, migrate, and manage scalable cloud environments.",
-      features: ["AWS, Azure, GCP Experts", "Hybrid & Private Cloud", "Cloud Cost Optimization", "Infrastructure as Code"]
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      desc: "Protect critical assets with military-grade security frameworks.",
-      features: ["Zero-Trust Architecture", "MDR & Threat Hunting", "Penetration Testing", "Security Awareness Training"]
-    },
-    {
       icon: Network,
-      title: "Network Architecture",
-      desc: "Design and implement high-performance, resilient corporate networks.",
-      features: ["SD-WAN Deployment", "Wireless Infrastructure", "Network Segmentation", "Global Load Balancing"]
+      title: "Industrial & Corporate Network Design",
+      desc: "Design and implementation of stable, scalable business networks.",
+      features: ["LAN/WAN Planning", "Structured Deployment", "Performance Tuning", "Secure Segmentation"]
     },
     {
       icon: ServerCog,
-      title: "Managed IT Services",
-      desc: "Comprehensive outsourced IT management and support.",
-      features: ["24/7/365 Helpdesk", "Endpoint Management", "Patch Management", "IT Asset Lifecycle"]
-    },
-    {
-      icon: Database,
-      title: "Data Center Solutions",
-      desc: "Physical infrastructure management and colocation services.",
-      features: ["Server Virtualization", "Storage Area Networks", "Power & Cooling", "Hardware Lifecycle"]
-    },
-    {
-      icon: Lightbulb,
-      title: "IT Consulting & CIO",
-      desc: "Strategic technology planning aligned with business objectives.",
-      features: ["Digital Transformation", "IT Budget Planning", "Vendor Management", "M&A IT Integration"]
+      title: "Windows Server Advanced AD Setup",
+      desc: "Advanced Active Directory setup for Windows Server environments.",
+      features: ["Server 2012 Setup", "Server 2016 Setup", "Server 2019 Setup", "Server 2022 Setup"]
     },
     {
       icon: RefreshCcw,
-      title: "Disaster Recovery",
-      desc: "Ensure business continuity in the face of catastrophic events.",
-      features: ["RTO/RPO Planning", "Automated Backups", "Failover Testing", "Geographic Redundancy"]
+      title: "Annual Maintenance Contract (AMC)",
+      desc: "Preventive and corrective IT maintenance for uninterrupted operations.",
+      features: ["Routine Health Checks", "Issue Resolution", "Performance Monitoring", "System Upkeep"]
+    },
+    {
+      icon: Database,
+      title: "Data Recovery & Backup Solutions",
+      desc: "Corporate backup and recovery with NAS and SAN based strategies.",
+      features: ["NAS Backup Setup", "SAN Integration", "Recovery Planning", "Data Protection"]
+    },
+    {
+      icon: Cloud,
+      title: "Time & Attendance System Setup",
+      desc: "Implementation of attendance and workforce tracking infrastructure.",
+      features: ["Device Installation", "Policy Configuration", "Reporting Flow", "Operational Support"]
+    },
+    {
+      icon: Lightbulb,
+      title: "Small Business ERP Development",
+      desc: "Business-focused ERP software development for operational control.",
+      features: ["Requirement Analysis", "Custom Module Build", "Workflow Integration", "Deployment Support"]
+    },
+    {
+      icon: Shield,
+      title: "Advanced Firewall Security Setup",
+      desc: "Professional firewall deployment and hardening for business security.",
+      features: ["Fortinet Setup", "Cisco Setup", "SonicWall Setup", "Policy Hardening"]
     },
     {
       icon: Scale,
-      title: "Compliance & Governance",
-      desc: "Navigate complex regulatory requirements with confidence.",
-      features: ["SOC 2 Compliance", "HIPAA/HITRUST", "ISO 27001", "Audit Preparation"]
-    }
+      title: "Antivirus Console Setup",
+      desc: "Centralized endpoint protection setup for business environments.",
+      features: ["ESET Console Setup", "Quick Heal Setup", "Policy Control", "Threat Monitoring"]
+    },
+    {
+      icon: Shield,
+      title: "CCTV & Security Setup",
+      desc: "Complete surveillance setup using DVR and NVR systems.",
+      features: ["Camera Planning", "DVR Setup", "NVR Setup", "Recording Management"]
+    },
+    {
+      icon: Database,
+      title: "IT Products Supply",
+      desc: "Old/new laptops, printers, and complete business IT product support.",
+      features: ["Laptop Solutions", "Printer Solutions", "Hardware Sourcing", "Business Procurement"]
+    },
+    {
+      icon: Cloud,
+      title: "Website Development",
+      desc: "Professional website development services for business growth.",
+      features: ["Business Website Build", "Modern UI Delivery", "Responsive Layouts", "Deployment Support"]
+    },
   ];
 
   return (
@@ -77,9 +95,9 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Enterprise IT Services</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">CNS IT Services</h1>
             <p className="text-xl text-muted-foreground">
-              End-to-end technology solutions designed to secure your data, optimize performance, and drive business growth.
+              Practical IT solutions for corporate and industrial organizations, delivered by CYBER NETWORK SECURITY.
             </p>
           </motion.div>
         </div>

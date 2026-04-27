@@ -27,30 +27,30 @@ const fadeUp = {
 
 const featuredServices = [
   {
-    title: "Cloud Infrastructure",
-    desc:  "Scalable, resilient cloud architecture deployed across AWS, Azure and private data centers with zero-downtime migration.",
+    title: "Industrial & Corporate Network Design",
+    desc:  "Complete network architecture planning and implementation for factories, offices, and enterprise environments with secure segmentation.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80",
-    tag: "Cloud", d1: "Multi-region", d2: "99.99% SLA",
+    tag: "Network", d1: "Corporate Grade", d2: "Scalable Design",
   },
   {
-    title: "Cybersecurity",
-    desc:  "Zero-trust security models, continuous threat hunting, and SOC monitoring for regulated industries.",
+    title: "Windows Server Advanced AD Setup",
+    desc:  "Advanced Active Directory setup and optimization for Windows Server 2012, 2016, 2019, and 2022 across multi-user business environments.",
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80",
-    tag: "Security", d1: "ISO 27001", d2: "24/7 SOC",
+    tag: "Server", d1: "AD Expertise", d2: "2012-2022",
   },
   {
-    title: "Network Architecture",
-    desc:  "High-throughput, low-latency enterprise networking, SD-WAN, and intelligent traffic management at scale.",
+    title: "Advanced Firewall Security Setup",
+    desc:  "Firewall implementation and policy hardening with Fortinet, Cisco, and SonicWall for secure internet and branch connectivity.",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&q=80",
-    tag: "Network", d1: "SD-WAN", d2: "Sub-5ms",
+    tag: "Security", d1: "Fortinet/Cisco", d2: "SonicWall",
   },
 ];
 
 const whyItems = [
-  { icon: Headphones, title: "Proactive 24/7 Support",        desc: "Our US-based NOC monitors your environment round the clock. Average incident response time under 8 minutes — before your users notice." },
-  { icon: Lock,       title: "Security-First Architecture",   desc: "Every engagement begins with a threat model. Security is structural, not bolt-on. ISO 27001 and SOC 2 Type II certified across all services." },
-  { icon: Cloud,      title: "Cloud-Native Expertise",        desc: "From hybrid cloud migrations to fully managed Kubernetes platforms, we build cloud environments designed to scale with your ambitions." },
-  { icon: Network,    title: "Enterprise Networking",         desc: "SD-WAN, MPLS, and zero-trust network access delivering high-throughput connectivity with built-in redundancy across every site." },
+  { icon: Headphones, title: "Reliable AMC Support",          desc: "Our Annual Maintenance Contract (AMC) model keeps business systems healthy with preventive care, fast issue resolution, and long-term reliability." },
+  { icon: Lock,       title: "Security-First Implementation", desc: "From firewall security to antivirus console setup and CCTV/NVR systems, CNS builds practical protection around your complete IT infrastructure." },
+  { icon: Cloud,      title: "Backup & Recovery Focus",       desc: "Corporate backup design with NAS and SAN plus recovery planning helps protect critical business data and reduce downtime risk." },
+  { icon: Network,    title: "Business-Ready Infrastructure", desc: "We design stable industrial and corporate networks that support users, servers, branches, and business applications with consistent performance." },
 ];
 
 export default function Home() {
@@ -75,21 +75,21 @@ export default function Home() {
             <motion.p custom={0} variants={fadeUp} initial="hidden" animate="visible"
               className="text-xs font-bold uppercase tracking-[0.3em] mb-5"
               style={{ color: AMBER }}>
-              Enterprise IT Solutions
+              CYBER NETWORK SECURITY
             </motion.p>
 
             <motion.h1 custom={1} variants={fadeUp} initial="hidden" animate="visible"
               className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-white mb-7 uppercase">
-              Build Your<br />
-              <span style={{ color: AMBER }}>Digital</span><br />
-              Foundation.
+              We Do What<br />
+              <span style={{ color: AMBER }}>We Want</span><br />
+              Because We Can
             </motion.h1>
 
             <motion.p custom={2} variants={fadeUp} initial="hidden" animate="visible"
               className="text-base text-white/70 leading-relaxed mb-10 max-w-lg font-light">
-              Cyber Network Security delivers uncompromising IT infrastructure,
-              cloud architecture, and managed services to organizations that
-              cannot afford downtime.
+              CNS delivers practical and secure IT solutions for corporate and
+              industrial environments in Rajkot and beyond, with trusted service
+              delivery since 2015.
             </motion.p>
 
             <motion.div custom={3} variants={fadeUp} initial="hidden" animate="visible"
@@ -100,7 +100,7 @@ export default function Home() {
                   className="inline-flex items-center gap-2 h-12 px-8 rounded-full text-sm font-bold tracking-wide transition-all hover:opacity-90 active:scale-[0.97]"
                   style={{ backgroundColor: AMBER, color: DARK }}
                 >
-                  Get Started <ArrowRight className="h-4 w-4" />
+                  Request Service <ArrowRight className="h-4 w-4" />
                 </button>
               </Link>
               <Link href="/services">
@@ -108,7 +108,7 @@ export default function Home() {
                   data-testid="btn-hero-learn-more"
                   className="inline-flex items-center gap-2 h-12 px-8 rounded-full text-sm font-semibold text-white border border-white/30 bg-white/8 hover:bg-white/15 transition-all tracking-wide"
                 >
-                  Our Services
+                  View Services
                 </button>
               </Link>
             </motion.div>
@@ -127,10 +127,10 @@ export default function Home() {
             style={{ boxShadow: `0 8px 40px 0 rgba(245,158,11,0.12), 0 2px 10px 0 rgba(0,0,0,0.10)` }}
           >
             {[
-              { value: "500+",  label: "Enterprise Clients" },
-              { value: "99.9%", label: "Uptime Guaranteed" },
-              { value: "24/7",  label: "US-Based NOC" },
-              { value: "15+",   label: "Years Experience" },
+              { value: "2015", label: "Serving Since" },
+              { value: "11+",  label: "Core IT Services" },
+              { value: "CNS",  label: "Trusted Brand" },
+              { value: "24x7", label: "Support Focus" },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center text-center px-4">
                 <span className="text-3xl font-black tracking-tight" style={{ color: AMBER }}>{stat.value}</span>
@@ -153,7 +153,7 @@ export default function Home() {
             className="flex items-end justify-between mb-12"
           >
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: AMBER }}>What We Offer</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: AMBER }}>Core Offerings</p>
               <h2 className="text-3xl md:text-4xl font-black text-foreground tracking-tight">Featured Services</h2>
             </div>
             <Link href="/services"
@@ -221,16 +221,16 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.55 }}
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-4" style={{ color: AMBER }}>Our Promise</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-4" style={{ color: AMBER }}>Our Commitment</p>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight text-white mb-6">
                 Always your<br />
-                most reliable<br />
-                technology partner
+                reliable IT<br />
+                service partner
               </h2>
               <p className="text-white/60 text-base leading-relaxed mb-10 max-w-sm font-light">
-                Since 2008, CNS has been the infrastructure backbone for
-                enterprises that refuse to compromise on stability, security, or
-                scalability. We're measured by your success.
+                Since 2015, CNS has helped businesses build secure networks,
+                robust server setups, backup systems, and field-ready IT support.
+                We are measured by uptime, trust, and long-term relationships.
               </p>
               <Link href="/contact">
                 <button
@@ -283,8 +283,8 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="mb-12"
           >
-            <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: AMBER }}>Portfolio</p>
-            <h2 className="text-3xl md:text-4xl font-black text-foreground tracking-tight">Our Infrastructure, In Action</h2>
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] mb-2" style={{ color: AMBER }}>Work Snapshot</p>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground tracking-tight">Our IT Execution, In Action</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -306,13 +306,13 @@ export default function Home() {
                   <ServerCog className="h-5 w-5" style={{ color: AMBER }} />
                 </div>
                 <h3 className="text-2xl font-black text-white mb-4 leading-snug tracking-tight">
-                  Mission-Critical Infrastructure
+                  Business-Critical Infrastructure
                 </h3>
                 <p className="text-white/55 text-sm leading-relaxed font-light">
-                  From co-location facilities to edge computing nodes, CNS
-                  designs and manages infrastructure that keeps your business
-                  running — no matter what. Explore our case studies and see
-                  how we've helped organizations scale with confidence.
+                  From network design and firewall implementation to CCTV,
+                  backup, and server upgrades, CNS delivers practical IT
+                  solutions that keep day-to-day business operations running
+                  smoothly and securely.
                 </p>
               </div>
               <Link
@@ -369,11 +369,12 @@ export default function Home() {
           >
             <div>
               <h2 className="text-2xl md:text-4xl font-black text-white mb-3 tracking-tight leading-tight">
-                Ready to upgrade your<br className="hidden md:block" /> infrastructure?
+                Ready to secure and<br className="hidden md:block" /> strengthen your IT?
               </h2>
               <p className="text-white/55 text-sm max-w-lg font-light leading-relaxed">
-                Schedule a strategic consultation with our enterprise architects.
-                We'll evaluate your environment and map a clear path forward.
+                Connect with CNS for network, server, security, backup, and IT
+                product requirements. We help you plan and implement with
+                confidence.
               </p>
             </div>
             <Link href="/contact" className="flex-shrink-0">
@@ -383,7 +384,7 @@ export default function Home() {
                 style={{ backgroundColor: AMBER, color: DARK }}
               >
                 <PhoneCall className="h-4 w-4" />
-                Contact Our Team
+                Contact CNS Team
               </button>
             </Link>
           </motion.div>

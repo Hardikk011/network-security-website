@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 
 import { MainLayout } from "@/layout/MainLayout";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Services from "@/pages/Services";
 import About from "@/pages/About";
@@ -15,6 +16,7 @@ const queryClient = new QueryClient();
 function Router() {
   return (
     <MainLayout>
+      <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/services" component={Services} />

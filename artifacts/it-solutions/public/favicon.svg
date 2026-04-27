@@ -1,3 +1,32 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#0B0F1A"/>
+
+  <!-- Circular Border Gradient - Pink to Blue -->
+  <defs>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF1B6D;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF1B6D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5B4EFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Circle Border -->
+  <circle cx="90" cy="90" r="65" fill="none" stroke="url(#circleGradient)" stroke-width="8"/>
+
+  <!-- Inner Circle for network design -->
+  <circle cx="90" cy="90" r="52" fill="white" fill-opacity="0.95"/>
+
+  <!-- Network nodes (stylized) -->
+  <circle cx="70" cy="70" r="4" fill="#FF1B6D"/>
+  <circle cx="110" cy="70" r="4" fill="#FF1B6D"/>
+  <circle cx="90" cy="100" r="4" fill="#5B4EFF"/>
+
+  <!-- Connection lines -->
+  <line x1="70" y1="70" x2="110" y2="70" stroke="#E0E0E0" stroke-width="1.5"/>
+  <line x1="70" y1="70" x2="90" y2="100" stroke="#E0E0E0" stroke-width="1.5"/>
+  <line x1="110" y1="70" x2="90" y2="100" stroke="#E0E0E0" stroke-width="1.5"/>
+
+  <!-- CNS Text -->
+  <text x="90" y="95" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#0B87D9" text-anchor="middle" dominant-baseline="middle">CNS</text>
 </svg>
